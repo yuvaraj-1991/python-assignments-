@@ -210,9 +210,14 @@ for employee in employees:
     if employee["EmployeeID"] == delEmp:               
         print("Employee ID found! Deleting it...... ")
         employees.remove(employee)
+        print("Employee Deleted Successfully!")
+        print("-"*50)        
         break    
 else:
     print("Employee Not Found! ")    
 
 
 
+for employee in employees:
+    for key, values in employee.items():
+        print(f"{key}, {values}")
