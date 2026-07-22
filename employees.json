@@ -1,0 +1,14 @@
+[
+    {
+        "EmployeeID": 1,
+        "Name": "Junior"
+    },
+    {
+        "EmployeeID": 2,
+        "Name": "Senior"
+    },
+    {
+        "EmployeeID": 3,
+        "Name": "Leader"
+    }
+]
