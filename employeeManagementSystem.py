@@ -4,23 +4,23 @@ print("================= Employee Management ===================== ")
 
 
 
-# print("Enter the employee details to add ")
+print("Enter the employee details to add ")
 
-# while True:
-#     employee = {}
+while True:
+    employee = {}
 
-#     employee['EmployeeID'] = int(input("Enter Employee ID : "))
-#     employee['Name'] = input("Enter the Employee Name : ")
-#     employee['Age'] = int(input("Enter the Employee Age : "))
-#     employee['Department'] = input("Enter the Employee Department : ")
-#     employee['Salary'] = int(input("Enter the Employee Salary : "))
+    employee['EmployeeID'] = int(input("Enter Employee ID : "))
+    employee['Name'] = input("Enter the Employee Name : ")
+    employee['Age'] = int(input("Enter the Employee Age : "))
+    employee['Department'] = input("Enter the Employee Department : ")
+    employee['Salary'] = int(input("Enter the Employee Salary : "))
 
-#     employees.append(employee) #here we are appending it to the main employees list 
+    employees.append(employee) #here we are appending it to the main employees list 
 
-#     choice = input("Do you want to add another Employee : (y/n) ").strip().lower()
+    choice = input("Do you want to add another Employee : (y/n) ").strip().lower()
     
-#     if choice != 'y':
-#         break
+    if choice != 'y':
+        break
 
 # #Here we are looping over each employee and displaying them using loops and all items from dictionary
 
