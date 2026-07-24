@@ -1,14 +1,30 @@
 [
     {
         "EmployeeID": 1,
-        "Name": "Junior"
+        "Name": "Junior",
+        "Age": 20,
+        "Department": "Devops",
+        "Salary": 50
     },
     {
         "EmployeeID": 2,
-        "Name": "Senior"
+        "Name": "Senior",
+        "Age": 30,
+        "Department": "Devops",
+        "Salary": 75
     },
     {
         "EmployeeID": 3,
-        "Name": "Leader"
+        "Name": "Leader",
+        "Age": 40,
+        "Department": "Devops",
+        "Salary": 100
+    },
+    {
+        "EmployeeID": 4,
+        "Name": "Yuv",
+        "Age": 25,
+        "Department": "OS",
+        "Salary": 70
     }
 ]

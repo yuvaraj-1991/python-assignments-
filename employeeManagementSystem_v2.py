@@ -48,18 +48,18 @@ while True:
 
             #Displaying the employees 
             # with open('employees.json', 'r') as empfile:
-            #     employees = json.load(empfile)
-            for emp in employees:
-                for key,values in emp.items():
-                    print("-"*50)
-                    print(f"{key} {values}")
+            #     employees = json.load(empfile)           
 
             choice = input("Do you want to add another Employee : (y/n) ").strip().lower()
             
             if choice != 'y':
                 break
     elif userChoice == 2:
-        print("You have entered 2. Display Employees! ")
+        print("You have entered 2. Display Employees! Her is the List of Employees: ")
+        for emp in employees:
+            print("-"*50)
+            for key,values in emp.items():                    
+                print(f"{key} {values}")
     elif userChoice == 3:
         print("You have entered 3. Search Employee! ")  
     elif userChoice == 4:
