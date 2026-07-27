@@ -79,8 +79,46 @@ while True:
         for emp in employees:
             if emp['EmployeeID'] == updateEmp:
                 for keys,values in emp.items():
-                    print(f"{keys} : {values}")                    
+                    print(f"{keys} : {values}") 
+                        
+                print(''' 
+                        What would you like to update? 
+                        
+                        1. Name
+                        2. Age
+                        3. Department
+                        4. Salary
+
+                        ''')      
+                menuChoice = int(input("Enter your choice : "))  
+
+                if menuChoice == 1:
+                    updatedName = input("Enter the Name to update : ")
+                    emp['Name'] = updatedName
+                   
+                elif menuChoice == 2:
+                    updatedAge = int(input("Enter the Age to update : "))
+                    emp['Age'] = updatedAge
+                    
+                elif menuChoice == 3:
+                    updatedDep = input("Enter the Department to update : ")                       
+                    emp['Department'] = updatedDep 
+                    
+                elif menuChoice == 4:
+                    updatedSal = int(input("Enter the Salary to update : "))
+                    emp['Salary'] = updatedSal
+                    
+                else:
+                    print("Invalid choice ! ")    
+
+                with open('employees.json', 'w') as fil:
+                        json.dump(employees, fil, indent=4)
+
+                print("Employee updated successfully!")    
+
                 break
+        else:
+            print("Employee ID not found! ")
 
     elif userChoice == 5:
         print("You have entered 5. Delete Employee! ")  
