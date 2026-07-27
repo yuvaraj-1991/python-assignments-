@@ -46,7 +46,7 @@ while True:
                 json.dump(employees, empfile, indent=4)
             
 
-            #Displaying the employees 
+            
             # with open('employees.json', 'r') as empfile:
             #     employees = json.load(empfile)           
 
@@ -55,15 +55,33 @@ while True:
             if choice != 'y':
                 break
     elif userChoice == 2:
+        #Displaying the employees 
         print("You have entered 2. Display Employees! Her is the List of Employees: ")
         for emp in employees:
             print("-"*50)
             for key,values in emp.items():                    
-                print(f"{key} {values}")
+                print(f"{key} : {values}")
     elif userChoice == 3:
-        print("You have entered 3. Search Employee! ")  
+        #Employee Search 
+        empSearch = int(input("You have entered 3. Search Employee! Please enter the Employee ID : \n"))
+        for emp in employees:
+            if empSearch == emp['EmployeeID']:
+                print("-"*50)
+                print("Employee ID found!")
+                for keys, values in emp.items():                    
+                    print(f"{keys}: {values}")
+                break    
+        else:
+            print("Employee ID Not Found! Try again")        
+
     elif userChoice == 4:
-        print("You have entered 4. Update Employee! ")  
+        updateEmp = int(input("You have entered 4. Update Employee! Please enter the Employee ID: "))
+        for emp in employees:
+            if emp['EmployeeID'] == updateEmp:
+                for keys,values in emp.items():
+                    print(f"{keys} : {values}")                    
+                break
+
     elif userChoice == 5:
         print("You have entered 5. Delete Employee! ")  
     elif userChoice == 6:  
