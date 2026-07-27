@@ -121,7 +121,20 @@ while True:
             print("Employee ID not found! ")
 
     elif userChoice == 5:
-        print("You have entered 5. Delete Employee! ")  
+        delEmp = int(input("You have entered 5. Delete Employee! Please enter the Employee ID to delete : "))  
+        for emp in employees:
+            if emp["EmployeeID"] == delEmp:
+                print("Employee found, deleting!! ") 
+                employees.remove(emp)
+                print("Employee Deleted Successfully!! ")
+                break                
+        else:
+            print("Employee Not found!")
+
+        with open('employees.json', 'w') as fil:
+            json.dump(employees, fil, indent=4)    
+    
+    
     elif userChoice == 6:  
         print("Exiting! Have a nice day :-) ")
         break
