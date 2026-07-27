@@ -1,5 +1,24 @@
 #Here is the latest code of Employee Management System
 
+# Assignment 1
+# Employee Management System
+#
+# Concepts practiced:
+# - Variables
+# - Input/Output
+# - if/elif/else
+# - while loops
+# - for loops
+# - for...else
+# - Lists
+# - Dictionaries
+# - JSON file handling
+# - CRUD operations
+#
+# Note:
+# This version intentionally does not use functions.
+
+
 import json
 
 #Here we are importing Employee data 
