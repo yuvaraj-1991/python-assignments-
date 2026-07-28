@@ -1,0 +1,43 @@
+[
+    {
+        "ServerID": 101,
+        "Hostname": "web01",
+        "IPAddress": "192.168.1.10",
+        "Environment": "Development",
+        "OperatingSystem": "Ubuntu",
+        "Status": "Running"
+    },
+    {
+        "ServerID": 102,
+        "Hostname": "web02",
+        "IPAddress": "192.168.1.11",
+        "Environment": "QA",
+        "OperatingSystem": "FEDORA",
+        "Status": "Stopped"
+    },
+    {
+        "ServerID": 103,
+        "Hostname": "web03",
+        "IPAddress": "192.168.1.12",
+        "Environment": "Production",
+        "OperatingSystem": "RHELV10",
+        "Status": "Running"
+    },
+    {
+        "ServerID": 104,
+        "Hostname": "app01",
+        "IPAddress": "192.168.1.13",
+        "Environment": "Production",
+        "OperatingSystem": "Ubuntu",
+        "Status": "Running"
+    },
+    {
+        "ServerID": 105,
+        "Hostname": "app02",
+        "IPAddress": "192.168.1.14",
+        "Environment": "Production",
+        "OperatingSystem": "RHELV9",
+        "Status": "Running"
+    }   
+    
+]
