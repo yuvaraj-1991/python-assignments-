@@ -178,4 +178,4 @@ def delete_servers(servers):
         print("Server ID not found! ")            
 
 
-delete_servers(servers)
+# delete_servers(servers)
