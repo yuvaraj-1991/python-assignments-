@@ -32,7 +32,7 @@ def display_servers(servers):
                  print(f"{key} : {value}")    
 
 servers = load_servers()
-display_servers(servers)
+# display_servers(servers)
 
 def search_servers(servers):
     print("-"*50)
@@ -48,7 +48,7 @@ def search_servers(servers):
     else:
         print("Server not found!")      
 
-search_servers(servers)            
+# search_servers(servers)            
 
 def add_servers(servers):
 
@@ -91,5 +91,49 @@ def add_servers(servers):
             break     
 
         
-add_servers(servers)             
+# add_servers(servers)             
 
+#Update Server 
+
+def update_servers(servers):
+
+    server_id_update = int(input("Enter Server ID to update : "))
+
+    for server in servers:
+        if server["ServerID"] == server_id_update:
+            print("Current Server Configuration : ")
+            print("-"*50)
+            for key,value in server.items():
+                print(f"{key} : {value}")
+            # user_choice = int(input("Which field would you like to update : "))
+            print (''' 
+                    1. Hostname
+                    2. IP Address
+                    3. Environment
+                    4. Operating System
+                    5. Status
+                    6. Exit
+                        ''')
+            while True:
+                user_choice = int(input("Which field would you like to update : "))
+                if user_choice == 1:
+                    print("You selected Hostname")
+                elif user_choice == 2:
+                    print("You selected IP Address")   
+                elif user_choice == 3:
+                    print("You selected IP Address")   
+                elif user_choice == 4:
+                    print("You selected Operating System")    
+                elif user_choice == 5:
+                    print("You selected Status")    
+                elif user_choice == 6:
+                    print("Exiting!!")
+                    break
+            break
+    else:
+        print("Server ID not found!")    
+
+
+
+
+update_servers(servers)
