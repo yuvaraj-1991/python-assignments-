@@ -1,9 +1,9 @@
 #Main file here we will import our functions and start application 
 
 import json 
+from server_manager import load_servers,display_servers,search_servers,add_servers,update_servers,delete_servers
 
-with open('servers.json', 'r') as file:
-    servers = json.load(file)
+servers = load_servers()  
 
 while True: 
 
@@ -34,7 +34,11 @@ while True:
         elif user_choice == 5:
                 delete_servers(servers) 
         elif user_choice == 6:
-                print("Exiting!! Have a Nice Day! ")                               
+                print("Exiting!! Have a Nice Day! ")  
+                break 
+        else:
+            print("Invalid Choice, Select again")        
+                                            
 
 
         

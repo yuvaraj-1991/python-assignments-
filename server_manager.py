@@ -18,10 +18,22 @@ import json
 
 #Function to load servers
 
+
+    
+
 def load_servers():
      with open('servers.json', 'r') as file:
           servers = json.load(file)
           return servers
+
+servers = load_servers()     
+
+def find_servers(servers):
+    for server in servers:
+        print("-"*50)
+        for key,value in server.items():
+            print(f"{key} : {value}")
+        return server    
 
 #Function to display servers     
 
