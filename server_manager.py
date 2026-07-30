@@ -149,4 +149,33 @@ def update_servers(servers):
 
 
 
-update_servers(servers)
+# update_servers(servers)
+
+def delete_servers(servers):
+
+    server_id = int(input("Enter the Server ID : "))
+
+    for server in servers:
+        if server["ServerID"] == server_id:
+            print("="*50)
+            print("Server Found! ")
+            print("="*50)
+            for keys,values in server.items():
+                print(f"{keys} : {values}")
+            print("-"*50) 
+            user_choice = input("Are you sure! you want to delete it? (Y/N)").strip().lower()
+            if user_choice == "y":
+                print("Deleting it!!!!!")
+                servers.remove(server)
+                print("Deleted Successfully! ")
+
+                with open('servers.json', 'w') as fil:
+                    json.dump(servers, fil, indent=4)
+            else:
+                print("Not Performing delete, Exiting")
+            break
+    else:
+        print("Server ID not found! ")            
+
+
+delete_servers(servers)
