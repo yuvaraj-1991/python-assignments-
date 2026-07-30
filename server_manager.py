@@ -117,17 +117,30 @@ def update_servers(servers):
             while True:
                 user_choice = int(input("Which field would you like to update : "))
                 if user_choice == 1:
-                    print("You selected Hostname")
+                    hostname = input("Enter the Hostname : ")
+                    server["Hostname"] = hostname
                 elif user_choice == 2:
-                    print("You selected IP Address")   
+                    ip_add = input("Enter the IP Address : ")  
+                    server['IPAddress'] = ip_add
                 elif user_choice == 3:
-                    print("You selected IP Address")   
+                    env = input("Enter Environment : ")
+                    server["Environment"] = env               
                 elif user_choice == 4:
-                    print("You selected Operating System")    
+                    operating_system = input("Enter Operating System : ")    
+                    server["OperatingSystem"] = operating_system
                 elif user_choice == 5:
-                    print("You selected Status")    
+                    status = input("Enter the current Status : ")
+                    server["Status"] = status
                 elif user_choice == 6:
                     print("Exiting!!")
+                  
+
+                    with open('servers.json', 'w') as fil:
+                        json.dump(servers, fil, indent=4)
+                        print("="*50)
+                        print("Server updated successfully!")
+                        print("="*50)
+                        
                     break
             break
     else:
