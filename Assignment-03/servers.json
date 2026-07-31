@@ -1,0 +1,102 @@
+[
+    {
+        "Server ID": "SRV001",
+        "Hostname": "web-prod-01",
+        "IP Address": "10.10.1.11",
+        "Environment": "Production",
+        "Status": "Running",
+        "CPU Usage": 35,
+        "Memory Usage": 48,
+        "Disk Usage": 62
+    },
+    {
+        "Server ID": "SRV002",
+        "Hostname": "web-prod-02",
+        "IP Address": "10.10.1.12",
+        "Environment": "Production",
+        "Status": "Running",
+        "CPU Usage": 91,
+        "Memory Usage": 87,
+        "Disk Usage": 79
+    },
+    {
+        "Server ID": "SRV003",
+        "Hostname": "db-prod-01",
+        "IP Address": "10.10.2.20",
+        "Environment": "Production",
+        "Status": "Running",
+        "CPU Usage": 42,
+        "Memory Usage": 71,
+        "Disk Usage": 94
+    },
+    {
+        "Server ID": "SRV004",
+        "Hostname": "cache-prod-01",
+        "IP Address": "10.10.3.15",
+        "Environment": "Production",
+        "Status": "Stopped",
+        "CPU Usage": 0,
+        "Memory Usage": 0,
+        "Disk Usage": 51
+    },
+    {
+        "Server ID": "SRV005",
+        "Hostname": "app-stage-01",
+        "IP Address": "10.20.1.21",
+        "Environment": "Staging",
+        "Status": "Running",
+        "CPU Usage": 58,
+        "Memory Usage": 66,
+        "Disk Usage": 59
+    },
+    {
+        "Server ID": "SRV006",
+        "Hostname": "db-stage-01",
+        "IP Address": "10.20.2.22",
+        "Environment": "Staging",
+        "Status": "Running",
+        "CPU Usage": 82,
+        "Memory Usage": 91,
+        "Disk Usage": 88
+    },
+    {
+        "Server ID": "SRV007",
+        "Hostname": "web-dev-01",
+        "IP Address": "10.30.1.31",
+        "Environment": "Development",
+        "Status": "Running",
+        "CPU Usage": 18,
+        "Memory Usage": 29,
+        "Disk Usage": 37
+    },
+    {
+        "Server ID": "SRV008",
+        "Hostname": "app-dev-01",
+        "IP Address": "10.30.1.32",
+        "Environment": "Development",
+        "Status": "Maintenance",
+        "CPU Usage": 5,
+        "Memory Usage": 12,
+        "Disk Usage": 41
+    },
+    {
+        "Server ID": "SRV009",
+        "Hostname": "monitoring-01",
+        "IP Address": "10.40.1.50",
+        "Environment": "Infrastructure",
+        "Status": "Running",
+        "CPU Usage": 24,
+        "Memory Usage": 33,
+        "Disk Usage": 47
+    },
+    {
+        "Server ID": "SRV010",
+        "Hostname": "backup-01",
+        "IP Address": "10.40.2.60",
+        "Environment": "Infrastructure",
+        "Status": "Running",
+        "CPU Usage": 12,
+        "Memory Usage": 21,
+        "Disk Usage": 97
+    }
+]
