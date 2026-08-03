@@ -31,32 +31,48 @@ order_serv = 0
 
 with open('application.log', 'r') as file:
     for line in file:
-        if 'AuthenticationService' in line:
-            auth_serv += 1
-        elif 'PaymentService' in line:
-            payment_serv += 1
-        elif 'InventoryService' in line:
-            invent_serv += 1
-        elif 'DatabaseService' in line:
-            database_serv += 1
-        elif 'OrderService' in line:
-            order_serv += 1
+        if 'ERROR' in line and 'DatabaseService' in line:
+            print("========== DATABASE ERRORS ==========")
+            print(line)
+        elif 'ERROR' in line and 'AuthenticationService' in line:
+            print("========== AUTHETICATION ERRORS ==========")
+            print(line)    
+        elif 'ERROR' in line and 'OrderService' in line:
+            print("========== ORDERSERVICE ERRORS ==========")
+            print(line)
+        elif 'ERROR' in line and  'PaymentService' in line:
+            print("========== PAYMENTSERVICE ERRORS ==========")
+            print(line)
+        elif 'ERROR' in line and 'InventoryService' in line:
+            print("========== INVENTORY ERRORS ==========")
+            print(line)
+        #     if 'ERROR':
+        #         auth_serv += 1
+        # elif 'PaymentService' in line:
+        #     if 'ERROR':
+        #         payment_serv += 1
+        # elif 'InventoryService' in line:
+        #     invent_serv += 1
+        # elif 'DatabaseService' in line:
+        #     database_serv += 1
+        # elif 'OrderService' in line:
+        #     order_serv += 1
 
 
-print(f''' 
+# print(f''' 
 
-========== ERROR REPORT ==========
+# ========== ERROR REPORT ==========
 
-DatabaseService : {database_serv}
+# DatabaseService : {database_serv} 
 
-PaymentService : {payment_serv}
+# PaymentService : {payment_serv}
 
-InventoryService : {invent_serv}
+# InventoryService : {invent_serv}
 
-AuthenticationService : {auth_serv}
+# AuthenticationService : {auth_serv}
 
-OrderService : {order_serv}
+# OrderService : {order_serv}
 
-==================================
+# ==================================
 
-''')
+# ''')
