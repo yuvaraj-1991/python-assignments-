@@ -130,22 +130,60 @@ def display_servers(servers):
 # 
 # #Displaying every production server less than 20 GB      
 
+# while True:
+
+#     kernel_update = input("Show Production Servers with less than 20GB ? (Y/N) : ").strip().lower()
+
+#     if kernel_update == "y":
+#         for server in servers:
+#             if server["Environment"] == "Production" and server["Disk_Free_GB"] <= 20 and server["KernelUpdateRequired"] == "Yes":
+#                 print("-"*50)
+#                 for key,value in server.items():
+#                     print(f"{key} : {value}")
+#     elif kernel_update == 'n':
+#         print("Thank you have a nice day!!")
+#         break   
+#     else:
+#         print("Invalid Choice! ")      
+
+
+#Incident INC-2026-1042
+#Priority: High
+#Generate a report of all servers that satisfy all of the following:
+# Description
+
+# Generate a report of all servers that satisfy all of the following:
+
+# Environment = Production
+# Status = Running
+# RAM less than 16 GB
+# Kernel update required = Yes
+
+# Print the full server details.
+
+
+
 while True:
 
-    kernel_update = input("Show Production Servers with less than 20GB ? (Y/N) : ").strip().lower()
+    count = 0
+
+    kernel_update = input("Show Production Running with less than 16 GB Ram Kernel Update Yes Servers ? (Y/N) : ").strip().lower()
 
     if kernel_update == "y":
         for server in servers:
-            if server["Environment"] == "Production" and server["Disk_Free_GB"] <= 20 and server["KernelUpdateRequired"] == "Yes":
+            if (
+                server["Environment"] == "Production" 
+                and server["RAM_GB"] <= 16
+                and server["KernelUpdateRequired"] == "Yes"
+                and server["Status"] == "Running"
+                ):
                 print("-"*50)
+                count += 1
                 for key,value in server.items():
                     print(f"{key} : {value}")
+        print(f"Maching servers : {count}")            
     elif kernel_update == 'n':
         print("Thank you have a nice day!!")
-        break   
+        break       
     else:
-        print("Invalid Choice! ")      
-
-
-
-
+        print("Invalid Choice! ")     
