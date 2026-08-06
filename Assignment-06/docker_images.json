@@ -1,0 +1,112 @@
+[
+  {
+    "ImageID": 1,
+    "ImageName": "nginx",
+    "Tag": "1.27",
+    "Environment": "Production",
+    "BaseImage": "Alpine",
+    "Language": "N/A",
+    "SizeMB": 85,
+    "Vulnerabilities": 0,
+    "LastUpdatedDays": 5
+  },
+  {
+    "ImageID": 2,
+    "ImageName": "payment-service",
+    "Tag": "2.1.0",
+    "Environment": "Production",
+    "BaseImage": "Ubuntu",
+    "Language": "Java",
+    "SizeMB": 1250,
+    "Vulnerabilities": 4,
+    "LastUpdatedDays": 120
+  },
+  {
+    "ImageID": 3,
+    "ImageName": "inventory-service",
+    "Tag": "1.8.2",
+    "Environment": "QA",
+    "BaseImage": "Ubuntu",
+    "Language": "Python",
+    "SizeMB": 430,
+    "Vulnerabilities": 1,
+    "LastUpdatedDays": 20
+  },
+  {
+    "ImageID": 4,
+    "ImageName": "frontend",
+    "Tag": "3.5.1",
+    "Environment": "Production",
+    "BaseImage": "Node",
+    "Language": "JavaScript",
+    "SizeMB": 620,
+    "Vulnerabilities": 0,
+    "LastUpdatedDays": 12
+  },
+  {
+    "ImageID": 5,
+    "ImageName": "jenkins-agent",
+    "Tag": "latest",
+    "Environment": "Development",
+    "BaseImage": "Ubuntu",
+    "Language": "Java",
+    "SizeMB": 980,
+    "Vulnerabilities": 2,
+    "LastUpdatedDays": 200
+  },
+  {
+    "ImageID": 6,
+    "ImageName": "ml-api",
+    "Tag": "1.0.0",
+    "Environment": "Production",
+    "BaseImage": "Python",
+    "Language": "Python",
+    "SizeMB": 710,
+    "Vulnerabilities": 0,
+    "LastUpdatedDays": 8
+  },
+  {
+    "ImageID": 7,
+    "ImageName": "redis",
+    "Tag": "7.2",
+    "Environment": "Staging",
+    "BaseImage": "Alpine",
+    "Language": "N/A",
+    "SizeMB": 55,
+    "Vulnerabilities": 0,
+    "LastUpdatedDays": 30
+  },
+  {
+    "ImageID": 8,
+    "ImageName": "analytics-service",
+    "Tag": "5.4.0",
+    "Environment": "Production",
+    "BaseImage": "Ubuntu",
+    "Language": "Python",
+    "SizeMB": 1500,
+    "Vulnerabilities": 6,
+    "LastUpdatedDays": 365
+  },
+  {
+    "ImageID": 9,
+    "ImageName": "grafana",
+    "Tag": "11.2",
+    "Environment": "Production",
+    "BaseImage": "Alpine",
+    "Language": "Go",
+    "SizeMB": 290,
+    "Vulnerabilities": 0,
+    "LastUpdatedDays": 15
+  },
+  {
+    "ImageID": 10,
+    "ImageName": "prometheus",
+    "Tag": "2.55",
+    "Environment": "Production",
+    "BaseImage": "Alpine",
+    "Language": "Go",
+    "SizeMB": 180,
+    "Vulnerabilities": 1,
+    "LastUpdatedDays": 45
+  }
+]
