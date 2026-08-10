@@ -13,7 +13,7 @@ def load_images():
 
 docker_images = load_images()
 
-count = 0 
+
 
 # for image in docker_images:
 #     if image["Vulnerabilities"] >= 1:
@@ -45,3 +45,46 @@ count = 0
 
 #DEVOPS-4003
 
+# count = 0 
+
+# for image in docker_images:
+#     if (
+#         image["Environment"] == "Production"
+#         and image["Vulnerabilities"] > 0
+#         and image["LastUpdatedDays"] > 90
+#         ):
+#         count += 1
+#         print("="*50)
+#         for key, value in image.items():
+#             print(f"{key} : {value}")
+
+# print("="*50)
+# print(f"Risky production images are : {count}")
+# print("="*50)
+
+#DEVOPS-5001
+#Incident: Disk usage is increasing rapidly on our Docker hosts.
+
+# with open('docker-img.txt', 'r') as file:
+#     next(file) # Skip the first line header 
+#     for line in file:
+#         row_data = line.strip().split(",")
+#         print(row_data)
+
+count = 0
+
+with open('docker-img.txt', 'r') as file:  
+    next(file)
+    all_lines = file.readlines()
+    for line in all_lines:
+        data = line.split()
+        size_row = data[-1]
+        convert_row = int(size_row)
+        print(convert_row)
+
+    # new_data = file.read().splitlines()
+    # columns = new_data[4]
+    # print(columns)
+    # # print(type(new_data))
+    # # for line in new_data:
+    # #     print(type(line))   
