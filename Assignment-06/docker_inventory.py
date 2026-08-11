@@ -73,18 +73,27 @@ docker_images = load_images()
 
 count = 0
 
+docker_img_data = []
+
 with open('docker-img.txt', 'r') as file:  
     next(file)
     all_lines = file.readlines()
     for line in all_lines:
-        data = line.split()
-        size_row = data[-1]
-        convert_row = int(size_row)
-        print(convert_row)
+        data = line.split() #converting into a list 
+        size_row = data[-1] #extracting the last value 85MB or 1.2GB
+        print(size_row) 
+        if size_row.endswith("MB"): #Using endswith keyword checking if MB/GB
+            size_row = size_row[:-2] #String Slicing and removing MB 
+            con_size_row = int(size_row) 
+        elif size_row.endswith("GB"):
+            size_row = size_row[:-2] #String Slicing and removing GB 
+            con_size_row = float(size_row) * 1024 
 
-    # new_data = file.read().splitlines()
-    # columns = new_data[4]
-    # print(columns)
-    # # print(type(new_data))
-    # # for line in new_data:
-    # #     print(type(line))   
+        if con_size_row >= 1000:
+            docker_img_data.append(con_size_row)
+
+
+        
+  
+
+   
