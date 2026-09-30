@@ -1,0 +1,23 @@
+STEP 1
+Find .log files
+        ↓
+STEP 2
+Check their age
+        ↓
+STEP 3
+Filter old files
+        ↓
+STEP 4
+Report them
+        ↓
+STEP 5
+Archive
+        ↓
+STEP 6
+Verify
+        ↓
+STEP 7
+Delete
+        ↓
+STEP 8
+Final report
