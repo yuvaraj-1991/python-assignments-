@@ -1,0 +1,16 @@
+{
+    "application": {
+        "name": "payment-service",
+        "version": "1.0.0"
+    },
+    "deployment": {
+        "replicas": 4,
+        "environment": "production"
+    },
+    "logging": {
+        "level": "DEBUG"
+    },
+    "test": {
+        "test-1": "Test-info"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "deployment": {
+        "replicas": 4,
+        "environment": "production"
+    },
+    "logging": {
+        "level": "DEBUG"
+    }
+}
